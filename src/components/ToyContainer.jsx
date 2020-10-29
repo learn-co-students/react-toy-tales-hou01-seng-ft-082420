@@ -1,12 +1,15 @@
-import React from 'react';
-import ToyCard from './ToyCard'
+import React, { Component } from 'react';
 
-const ToyContainer = () => {
-  return(
+
+class ToyContainer extends Component {
+
+render() {
+  return (
     <div id="toy-collection">
-      {/* Render the collection of ToyCards */}
+      {this.props.toys}
     </div>
   );
+}
 }
 
 export default ToyContainer;
