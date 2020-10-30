@@ -78,7 +78,7 @@ class App extends React.Component {
     .then(this.frontEndDelete(toyId))
   }
 
-  //This is a patch of likes using a kind of confusing benifit of React where props are static objects but rather pointers to existing objects
+  //This is a patch of likes using a kind of confusing benifit of React where props aren't static objects but rather pointers to existing objects
   frontEndLikePatch = (toy) => {
     //We create an array that is representing all toys
     let allToys = this.state.allToys
