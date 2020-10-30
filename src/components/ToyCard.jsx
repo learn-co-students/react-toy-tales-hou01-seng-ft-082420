@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 
+
 class ToyCard extends Component {
   render() {
     return (
       <div className="card">
+      {/* Because the toy was passed down as a prop we can access it to grab our values needed */}
         <h2>{this.props.toy.name}</h2>
         <img
           src={this.props.toy.image}
@@ -11,6 +13,7 @@ class ToyCard extends Component {
           className="toy-avatar"
         />
         <p>{this.props.toy.likes} Likes </p>
+        {/* Adding event listeners and giving them our like and delete functions. Passing in values here lets us bubble those values up to parent and grandparent components */}
         <button className="like-btn" onClick={()=>this.props.frontEndLikePatch(this.props.toy)}>Like {"<3"}</button>
         <button className="del-btn" onClick={()=>this.props.backEndDelete(this.props.toy.id)}>Donate to GoodWill</button>
       </div>
