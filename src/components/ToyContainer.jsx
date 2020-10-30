@@ -1,12 +1,14 @@
-import React from 'react';
-import ToyCard from './ToyCard'
+import React from "react";
+import ToyCard from "./ToyCard";
 
-const ToyContainer = () => {
-  return(
+const ToyContainer = (props) => {
+  return (
     <div id="toy-collection">
-      {/* Render the collection of ToyCards */}
+      {props.allToys.map((toy) => {
+        return <ToyCard key={toy.id} toy={toy} backEndDelete={props.backEndDelete} frontEndLikePatch={props.frontEndLikePatch}/>;
+      })}
     </div>
   );
-}
+};
 
 export default ToyContainer;
