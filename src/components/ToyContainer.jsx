@@ -3,6 +3,8 @@ import ToyCard from './ToyCard'
 
 const ToyContainer = (props) => {
   // console.log(props)
+  //because this is a function, we have to pass props as an argument - if it were a class that
+  //extended to the component, you wouldn't have to
   return(
     <div id="toy-collection">
       {props.toyCollection.map(toy => {
